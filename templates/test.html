@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Bot Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="auth-section" class="auth-section">
+        <h1>Welcome to Crypto Bot Dashboard</h1>
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <span onclick="showRegisterForm()">Register</span></p>
+        </div>
+
+        <div id="register-form" class="form-container hidden">
+            <h2>Register</h2>
+            <input type="text" id="new-username" placeholder="Username" required>
+            <input type="password" id="new-password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <span onclick="showLoginForm()">Login</span></p>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <h2>Welcome, <span id="user-name"></span></h2>
+        <button onclick="logout()">Logout</button>
+
+        <h3>Live Data</h3>
+        <div id="data-section">
+            <div id="data-console"></div>
+        </div>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
